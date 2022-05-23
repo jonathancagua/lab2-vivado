@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
---Date        : Mon May  9 18:42:53 2022
+--Date        : Mon May 23 10:59:40 2022
 --Host        : DESKTOP-3PPTJFT running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -33,7 +33,9 @@ entity design_1_wrapper is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    buttons_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    switches_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
 end design_1_wrapper;
 
@@ -60,7 +62,9 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC;
+    switches_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    buttons_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1;
 begin
@@ -86,6 +90,8 @@ design_1_i: component design_1
       FIXED_IO_mio(53 downto 0) => FIXED_IO_mio(53 downto 0),
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
-      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb
+      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      buttons_tri_i(3 downto 0) => buttons_tri_i(3 downto 0),
+      switches_tri_i(1 downto 0) => switches_tri_i(1 downto 0)
     );
 end STRUCTURE;
