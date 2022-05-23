@@ -6,7 +6,7 @@
 <Project Version="7" Minor="36" Path="C:/Users/dev_fw/Desktop/CESE/vivado/lab2/lab2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="2ca3a9acab124280bf993d5590baba92"/>
+    <Option Name="Id" Val="b3d609db93ee4c95a654832314b48a9a"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
